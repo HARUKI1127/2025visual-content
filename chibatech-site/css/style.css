@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: "Yu Mincho", serif;
+  background: #2b1f1a;
+  color: #f5f5f5;
+}
+
+.header {
+  text-align: center;
+}
+
+.logo {
+  width: 200px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.nav li {
+  margin: 0 15px;
+}
+
+.nav a {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.box {
+  background: #3a2a24;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+}
