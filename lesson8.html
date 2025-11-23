@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>簡単なJavaScriptデモ</title>
+</head>
+<body>
+
+<h2>数値の計算</h2>
+数字1：<input type="number" id="a">
+数字2：<input type="number" id="b">
+<button onclick="calc()">足し算する</button>
+<p id="numResult"></p>
+
+<h2>文字列の処理</h2>
+文字列：<input type="text" id="text">
+<button onclick="showLength()">文字数を表示</button>
+<p id="textResult"></p>
+
+<script>
+function calc() {
+  const a = Number(document.getElementById('a').value);
+  const b = Number(document.getElementById('b').value);
+  const result = a + b;
+  document.getElementById('numResult').textContent = "結果：" + result;
+}
+
+function showLength() {
+  const txt = document.getElementById('text').value;
+  const len = txt.length;
+  document.getElementById('textResult').textContent = "文字数：" + len;
+}
+</script>
+
+</body>
+</html>
