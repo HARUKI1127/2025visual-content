@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>シンプル レスポンシブ + jQuery</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        header {
+            background: #4a90e2;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #box {
+            width: 80%;
+            height: 150px;
+            background: #ddd;
+            margin: 20px auto;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ▼ スマホ（600px以下）ではBOXを小さくする */
+        @media (max-width: 600px) {
+            #box {
+                width: 95%;
+                height: 120px;
+                background: #eee;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>レスポンシブ + jQuery</h1>
+</header>
+
+<div class="content">
+    <button id="changeBtn">色を変える</button>
+    <div id="box">BOX</div>
+</div>
+
+<script src="js/jquery-3.7.1.js"></script>
+<script>
+$(function() {
+    $("#changeBtn").on("click", function() {
+        $("#box").css("background", "#0008");
+    });
+});
+</script>
+
+</body>
+</html>
